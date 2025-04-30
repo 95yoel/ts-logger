@@ -27,9 +27,6 @@ Or clone it directly
 git clone https://github.com/95yoel/ts-logger
 ```
 
-## Example usage 
-
-````markdown
 ## 📦 Example usage
 
 ```ts
@@ -51,7 +48,3 @@ await Logger.measureAsync('Async Fetch', async () => {
 Logger.group('Auth')
 log.info('User logged in')
 Logger.groupEnd()
-
-
-````
-````

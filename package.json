@@ -1,5 +1,5 @@
 {
-  "name": "simple-logger",
+  "name": "ts-logger",
   "version": "1.0.0",
   "description": "Minimal TypeScript logger with levels, styles, grouping, filtering and JSON output",
   "main": "dist/logger.js",

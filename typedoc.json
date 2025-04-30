@@ -1,0 +1,9 @@
+{
+    "entryPoints": ["src/logger.ts"],
+    "out": "docs",
+    "plugin": ["typedoc-plugin-markdown"],
+    "readme": "none",
+    "excludePrivate": true,
+    "excludeProtected": true
+  }
+  

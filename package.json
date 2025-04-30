@@ -1,0 +1,25 @@
+{
+  "name": "simple-logger",
+  "version": "1.0.0",
+  "description": "Minimal TypeScript logger with levels, styles, grouping, filtering and JSON output",
+  "main": "dist/logger.js",
+  "types": "dist/logger.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "docs": "typedoc"
+  },
+  "keywords": [
+    "logger",
+    "typescript",
+    "console",
+    "debug",
+    "group",
+    "json"
+  ],
+  "author": "Yoel Villa",
+  "license": "MIT",
+  "devDependencies": {
+    "typedoc": "^0.28.3",
+    "typedoc-plugin-markdown": "^4.6.3"
+  }
+}

@@ -26,3 +26,27 @@ Or clone it directly
 ```console
 git clone https://github.com/95yoel/ts-logger
 ```
+
+## Example usage 
+
+````console
+import { Logger } from 'ts-logger/src/logger'
+
+const log = Logger.create('App')
+
+log.info('App started')
+log.debug('Fetching data...')
+
+Logger.measure('Expensive Task', () => {
+  // Do something CPU-intensive
+})
+
+await Logger.measureAsync('Async Fetch', async () => {
+  await fetch('/api/data')
+})
+
+Logger.group('Auth')
+log.info('User logged in')
+Logger.groupEnd()
+
+```

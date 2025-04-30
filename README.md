@@ -53,4 +53,6 @@ Logger.groupEnd()
 
 ## 📄 Notes
 
-This README is still a work in progress. More examples, usage details, and contribution guidelines will be added soon.
+This README is still a work in progress. More examples,   
+
+usage details, and contribution guidelines will be added soon.

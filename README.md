@@ -48,3 +48,9 @@ await Logger.measureAsync('Async Fetch', async () => {
 Logger.group('Auth')
 log.info('User logged in')
 Logger.groupEnd()
+
+---
+
+## 📄 Notes
+
+This README is still a work in progress. More examples, usage details, and contribution guidelines will be added soon.

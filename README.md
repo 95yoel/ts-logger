@@ -29,7 +29,10 @@ git clone https://github.com/95yoel/ts-logger
 
 ## Example usage 
 
-````console
+````markdown
+## 📦 Example usage
+
+```ts
 import { Logger } from 'ts-logger/src/logger'
 
 const log = Logger.create('App')
@@ -49,4 +52,4 @@ Logger.group('Auth')
 log.info('User logged in')
 Logger.groupEnd()
 
-```
+````

@@ -17,7 +17,6 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
   - [Data Logging](#data-logging)
   - [Toggle Timestamps](#toggle-timestamps)
   - [Custom Styles](#custom-styles)
-  - [Inspect Styles](#inspect-styles)
 - [Configuration](#-configuration)
 - [API Overview](#api-overview)
 
@@ -77,7 +76,7 @@ log.error('Something went wrong!')
 ```
 ---
 
-### Measuring performance
+### Performance Measurement
 
 ```ts
 // Synchronous task
@@ -95,7 +94,7 @@ await Logger.measureAsync('Data Fetch', async () => {
 ---
 
 
-### Using groups for structured logs
+### Grouped Logs
 
 ```ts
 Logger.group('Authentication Flow', undefined, true)
@@ -106,43 +105,15 @@ Logger.groupEnd()
 ```
 ---
 
-### JSON formatted logs
+### JSON Logs
 
 ```ts
 Logger.json('info', 'User details', 'AuthModule', { user: 'admin', role: 'editor' })
 ```
 ---
 
-### Global and context-based configuration
 
-```ts
-// Disable all logs
-Logger.disable()
 
-// Re-enable logs and set minimum level
-Logger.enable()
-Logger.setLevel('warn')
-
-// Disable logs for specific context
-Logger.disableContext('App')
-
-// Enable logs for previously disabled context
-Logger.enableContext('App')
-
-```
----
-
-### Customize log styles
-
-```ts
-
-Logger.configureStyles({
-  info: 'color: #4caf50; font-weight: bold;',
-  debug: 'color: #607d8b; font-style: italic;',
-})
-
-```
----
 
 ### Measure time
 
@@ -163,12 +134,25 @@ log.data({ userId: 123, action: 'login' })
 ```
 ---
 
-### Print current styles
+### Custom Styles
+
+Configure styles:
+```ts
+
+Logger.configureStyles({
+  info: 'color: #4caf50; font-weight: bold;',
+  debug: 'color: #607d8b; font-style: italic;',
+})
+
+```
+Print current styles:
 
 ```ts
 console.log(Logger.styles)
 ```
 ---
+
+
 
 ### Toggle timestamp in logs
 
@@ -179,6 +163,25 @@ Logger.hideTimestamp()
 And re-enable them with:
 ```ts
 Logger.showTimestamp()
+```
+---
+
+### Configuration
+
+```ts
+// Disable all logs
+Logger.disable()
+
+// Re-enable logs and set minimum level
+Logger.enable()
+Logger.setLevel('warn')
+
+// Disable logs for specific context
+Logger.disableContext('App')
+
+// Enable logs for previously disabled context
+Logger.enableContext('App')
+
 ```
 ---
 

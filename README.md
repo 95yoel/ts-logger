@@ -5,9 +5,9 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
 
 ## 📚 Table of Contents
 
-- [Features](#-features)
-- [Installation](#-installation)
-- [Recommended Setup](#-recommended-setup)
+- [Features](#features)
+- [Installation](#installation)
+- [Recommended Setup](#recommended-setup)
 - [Usage](#usage)
   - [Basic Logging](#basic-logging)
   - [Performance Measurement](#performance-measurement)

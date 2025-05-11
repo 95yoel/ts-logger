@@ -107,3 +107,16 @@ Logger.configureStyles({
 ```
 ---
 
+## API Overview 
+
+| Method                               | Description                                   |
+|--------------------------------------|-----------------------------------------------|
+| `Logger.create(ctx)`                 | Creates a context-aware logger                |
+| `Logger.enable()`                    | Enables all logging globally                  |
+| `Logger.disable()`                   | Disables all logging globally                 |
+| `Logger.setLevel(level)`             | Sets minimum log level to output              |
+| `Logger.measure(label, fn)`          | Measures synchronous function execution time  |
+| `Logger.measureAsync(label, fn)`     | Measures asynchronous function execution time |
+| `Logger.group(label)`                | Creates a log group                           |
+| `Logger.groupEnd()`                  | Ends the current log group                    |
+| `Logger.json(level, msg, ctx, data)` | Outputs structured JSON logs                  |

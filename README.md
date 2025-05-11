@@ -57,6 +57,53 @@ await Logger.measureAsync('Data Fetch', async () => {
 ```
 ---
 
-## 📄 Notes
 
-This README is still a work in progress. More examples and usage details will be added soon.
+### Using groups for structured logs
+
+```ts
+Logger.group('Authentication Flow', undefined, true)
+log.info('Attempting login for user: admin')
+log.debug('Checking credentials...')
+Logger.groupEnd()
+
+```
+---
+
+### JSON formatted logs
+
+```ts
+Logger.json('info', 'User details', 'AuthModule', { user: 'admin', role: 'editor' })
+```
+---
+
+### Global and context-based configuration
+
+```ts
+// Disable all logs
+Logger.disable()
+
+// Re-enable logs and set minimum level
+Logger.enable()
+Logger.setLevel('warn')
+
+// Disable logs for specific context
+Logger.disableContext('App')
+
+// Enable logs for previously disabled context
+Logger.enableContext('App')
+
+```
+---
+
+### Customize log styles
+
+```ts
+
+Logger.configureStyles({
+  info: 'color: #4caf50; font-weight: bold;',
+  debug: 'color: #607d8b; font-style: italic;',
+})
+
+```
+---
+

@@ -38,6 +38,7 @@ Logger.configureStyles({
 })
 
 ````
+------
 
 ## 📦 Example usage
 

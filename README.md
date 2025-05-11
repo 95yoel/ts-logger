@@ -8,7 +8,7 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
 - [Features](#-features)
 - [Installation](#-installation)
 - [Recommended Setup](#-recommended-setup)
-- [Usage](#-usage)
+- [Usage](#usage)
   - [Basic Logging](#basic-logging)
   - [Performance Measurement](#performance-measurement)
   - [Grouped Logs](#grouped-logs)
@@ -17,7 +17,7 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
   - [Data Logging](#data-logging)
   - [Toggle Timestamps](#toggle-timestamps)
   - [Custom Styles](#custom-styles)
-- [Configuration](#-configuration)
+- [Configuration](#configuration)
 - [API Overview](#api-overview)
 
 
@@ -58,7 +58,7 @@ Logger.configureStyles({
 ```
 ------
 
-# Usage
+## Usage
 
 ### Basic logging
 
@@ -208,3 +208,6 @@ Logger.enableContext('App')
 | `Logger.styles`                      | Returns the current CSS styles by level       |
 
 
+## 📄 License
+
+MIT © [95yoel](https://github.com/95yoel)

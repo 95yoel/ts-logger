@@ -6,11 +6,12 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
 ## ✨ Features
 
 - ✅ Log levels: `debug`, `info`, `warn`, `error`
-- 🎨 Styled output via `console.log` (browser DevTools)
-- ⏱ Timers and performance measurement (sync/async)
+- 🎨 Styled output with customizable CSS via browser DevTools
+- ⏱  Timers and performance measurement (sync/async)
 - 📦 JSON output for structured logging
 - 🧩 Context-aware child loggers
-- 📁 No dependencies, easy to use anywhere
+- 🚧 Enable/disable logs globally or per context
+- 📁 Zero dependencies, easy to use anywhere
 
 - ------
 
@@ -21,33 +22,20 @@ npm install github:95yoel/ts-logger
 
 ```
 
-Or clone it directly 
-
-```console
-git clone https://github.com/95yoel/ts-logger
-```
-
 ## 📦 Example usage
+
+# Basic logging
 
 ```ts
 import { Logger } from 'ts-logger/src/logger'
 
 const log = Logger.create('App')
 
-log.info('App started')
-log.debug('Fetching data...')
+log.info('Application started 🚀')
+log.debug('Debugging details here...')
+log.warn('Potential issue detected.')
+log.error('Something went wrong!')
 
-Logger.measure('Expensive Task', () => {
-  // Do something CPU-intensive
-})
-
-await Logger.measureAsync('Async Fetch', async () => {
-  await fetch('/api/data')
-})
-
-Logger.group('Auth')
-log.info('User logged in')
-Logger.groupEnd()
 
 ```
 ---

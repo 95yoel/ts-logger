@@ -22,6 +22,23 @@ npm install github:95yoel/ts-logger
 
 ```
 
+## 🛠 Recommended Setup
+
+For best maintainability, it's recommended to configure the logger once in your application's entry point (e.g., `main.ts`, `index.ts`, etc.).
+
+```ts
+// src/main.ts or similar
+import { Logger } from 'ts-logger'
+
+Logger.setLevel('info')          // Only show 'info', 'warn', 'error'
+Logger.showTimestamp()           // Optional: show timestamps (enabled by default)
+Logger.configureStyles({
+  info: 'color: #2196f3; font-weight: bold;',
+  warn: 'color: orange; font-weight: bold;',
+})
+
+````
+
 ## 📦 Example usage
 
 ### Basic logging
@@ -107,10 +124,41 @@ Logger.configureStyles({
 ```
 ---
 
+### Measure time
+
+```ts
+// Manual timer control
+Logger.start('Init')
+// ... some work ...
+Logger.end('Init')
+
+```
+---
+
+### Print data structures
+
+```ts
+log.data({ userId: 123, action: 'login' })
+
+```
+---
+
+### Print current styles
+
+```ts
+console.log(Logger.styles)
+```
+---
+
+
 ## API Overview 
 
 | Method                               | Description                                   |
 |--------------------------------------|-----------------------------------------------|
+| `Logger.info(msg, ctx?, ...data)`   | Logs an info message                           |
+| `Logger.warn(msg, ctx?, ...data)`   | Logs a warning message                         |
+| `Logger.error(msg, ctx?, ...data)`  | Logs an error message                          |
+| `Logger.debug(msg, ctx?, ...data)`  | Logs a debug message                           |
 | `Logger.create(ctx)`                 | Creates a context-aware logger                |
 | `Logger.enable()`                    | Enables all logging globally                  |
 | `Logger.disable()`                   | Disables all logging globally                 |
@@ -120,3 +168,9 @@ Logger.configureStyles({
 | `Logger.group(label)`                | Creates a log group                           |
 | `Logger.groupEnd()`                  | Ends the current log group                    |
 | `Logger.json(level, msg, ctx, data)` | Outputs structured JSON logs                  |
+| `Logger.start(label)`                | Starts a custom performance timer             |
+| `Logger.end(label)`                  | Ends the timer and logs duration              |
+| `Logger.data(ctx, data)`            | Logs a data structure at info level            |
+| `Logger.styles`                     | Returns the current CSS styles by level        |
+
+

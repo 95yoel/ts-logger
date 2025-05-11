@@ -40,6 +40,12 @@ npm install github:95yoel/ts-logger
 
 ```
 
+> ⚠️ Since this package is installed from GitHub (not NPM), make sure to import it like this:
+
+```ts
+import { Logger } from 'ts-logger/src/logger'
+```
+
 ## 🛠 Recommended Setup
 
 For best maintainability, it's recommended to configure the logger once in your application's entry point (e.g., `main.ts`, `index.ts`, etc.).
@@ -154,7 +160,7 @@ console.log(Logger.styles)
 
 
 
-### Toggle timestamp in logs
+### Toggle-timestamps
 
 You can hide timestamps in all logs if you want cleaner output:
 ```ts

@@ -40,6 +40,23 @@ log.error('Something went wrong!')
 ```
 ---
 
+### Measuring performance
+
+```ts
+// Synchronous task
+Logger.measure('Heavy Calculation', () => {
+  // Expensive synchronous code
+})
+
+// Asynchronous task
+await Logger.measureAsync('Data Fetch', async () => {
+  await fetch('/api/data')
+})
+
+
+```
+---
+
 ## 📄 Notes
 
 This README is still a work in progress. More examples and usage details will be added soon.

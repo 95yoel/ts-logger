@@ -3,6 +3,25 @@
 A lightweight, zero-dependency logger for TypeScript.
 Includes levels, styled output, timing utilities, and JSON logs. Ideal for debugging small to medium projects.
 
+## 📚 Table of Contents
+
+- [Features](#-features)
+- [Installation](#-installation)
+- [Recommended Setup](#-recommended-setup)
+- [Usage](#-usage)
+  - [Basic Logging](#basic-logging)
+  - [Performance Measurement](#performance-measurement)
+  - [Grouped Logs](#grouped-logs)
+  - [JSON Logs](#json-logs)
+  - [Manual Timers](#manual-timers)
+  - [Data Logging](#data-logging)
+  - [Toggle Timestamps](#toggle-timestamps)
+  - [Custom Styles](#custom-styles)
+  - [Inspect Styles](#inspect-styles)
+- [Configuration](#-configuration)
+- [API Overview](#api-overview)
+
+
 ## ✨ Features
 
 - ✅ Log levels: `debug`, `info`, `warn`, `error`
@@ -37,7 +56,7 @@ Logger.configureStyles({
   warn: 'color: orange; font-weight: bold;',
 })
 
-````
+```
 ------
 
 ## 📦 Example usage
@@ -151,6 +170,17 @@ console.log(Logger.styles)
 ```
 ---
 
+### Toggle timestamp in logs
+
+You can hide timestamps in all logs if you want cleaner output:
+```ts
+Logger.hideTimestamp()
+```
+And re-enable them with:
+```ts
+Logger.showTimestamp()
+```
+---
 
 ## API Overview 
 
@@ -171,7 +201,7 @@ console.log(Logger.styles)
 | `Logger.json(level, msg, ctx, data)` | Outputs structured JSON logs                  |
 | `Logger.start(label)`                | Starts a custom performance timer             |
 | `Logger.end(label)`                  | Ends the timer and logs duration              |
-| `Logger.data(ctx, data)`            | Logs a data structure at info level            |
-| `Logger.styles`                     | Returns the current CSS styles by level        |
+| `Logger.data(ctx, data)`             | Logs a data structure at info level           |
+| `Logger.styles`                      | Returns the current CSS styles by level       |
 
 

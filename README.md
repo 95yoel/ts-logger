@@ -24,7 +24,7 @@ npm install github:95yoel/ts-logger
 
 ## 📦 Example usage
 
-# Basic logging
+### Basic logging
 
 ```ts
 import { Logger } from 'ts-logger/src/logger'

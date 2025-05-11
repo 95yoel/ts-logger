@@ -58,7 +58,7 @@ Logger.configureStyles({
 ```
 ------
 
-## Usage
+# Usage
 
 ### Basic logging
 

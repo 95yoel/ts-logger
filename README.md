@@ -23,8 +23,10 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
   - [Custom Styles](#custom-styles)
 - [Configuration](#configuration)
 - [API Overview](#api-overview)
-- [CI/CD Pipeline](#cicd-pipeline)
-- [License](#license)
+- [CI/CD Pipeline](#-ci-cd-pipeline)
+- [License](#-license)
+
+
 
 
 

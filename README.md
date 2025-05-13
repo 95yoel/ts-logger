@@ -1,6 +1,7 @@
 # ts-logger
 
-[CI](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml/badge.svg)
+![CI](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml/badge.svg)
+
 
 A lightweight, zero-dependency logger for TypeScript.
 Includes levels, styled output, timing utilities, and JSON logs. Ideal for debugging small to medium projects.

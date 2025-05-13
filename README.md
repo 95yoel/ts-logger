@@ -23,6 +23,9 @@ Includes levels, styled output, timing utilities, and JSON logs. Ideal for debug
   - [Custom Styles](#custom-styles)
 - [Configuration](#configuration)
 - [API Overview](#api-overview)
+- [CI/CD Pipeline](#cicd-pipeline)
+- [License](#license)
+
 
 
 ## ✨ Features
@@ -216,6 +219,20 @@ Logger.enableContext('App')
 | `Logger.end(label)`                  | Ends the timer and logs duration              |
 | `Logger.data(ctx, data)`             | Logs a data structure at info level           |
 | `Logger.styles`                      | Returns the current CSS styles by level       |
+
+## 🚀 CI/CD Pipeline
+
+This project uses **GitHub Actions** to automate checks and ensure reliability on every commit to `main`.
+
+The pipeline includes:
+
+- ✅ Linting with ESLint (`console.log` usage is blocked)
+- 🛠 TypeScript build validation (`tsc`)
+- 🔄 Automatic build of `dist/`
+- 📦 Upload of build artifacts
+- 🛑 Workflow fails on any warning or build issue
+
+You can view the full workflow [here](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml).
 
 
 ## 📄 License

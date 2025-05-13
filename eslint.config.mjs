@@ -11,7 +11,7 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts}"], languageOptions: { globals: globals.browser },
 
     rules: {
-      'no-console': ['warn', { allow: ['warn', 'error', 'info', 'group', 'groupEnd'] }],
+      'no-console': ['warn', { allow: ['warn', 'error', 'info', 'group', 'groupEnd', 'debug' ,'groupCollapsed'] }],
       'semi': ['error', 'never'],
       '@typescript-eslint/no-unused-vars': ['warn'],
       '@typescript-eslint/explicit-function-return-type': 'off',

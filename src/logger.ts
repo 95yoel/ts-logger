@@ -210,6 +210,7 @@ export class Logger {
         if (!this._config.enabled) return
         if (ctx && this._disabledContexts.has(ctx)) return
         const prefix = `%c[GROUP: ${label}]${ctx ? ` [${ctx}]` : ''}`
+        
         const fn = collapsed ? console.groupCollapsed : console.group
         fn(prefix, style)
     }
@@ -220,7 +221,6 @@ export class Logger {
     static groupEnd() {
         console.groupEnd()
     }
-
 
     // ----------------------------
     // JSON output
@@ -282,7 +282,21 @@ export class Logger {
         const parts: unknown[] = [prefix, style, '', msg, ...data]
         if (this._config.showTimestamp) parts.push(`@${ts}`)
 
-        console[level === 'error' ? 'error' : level](...parts)
+        switch (level) {
+            case 'error':
+                console.error(...parts)
+                break
+            case 'warn':
+                console.warn(...parts)
+                break
+            case 'info':
+                console.info(...parts)
+                break
+            case 'debug':
+                console.debug(...parts)
+                break
+        }
+
     }
 
     // -------------

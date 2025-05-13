@@ -61,7 +61,7 @@ For best maintainability, it's recommended to configure the logger once in your 
 
 ```ts
 // src/main.ts or similar
-import { Logger } from 'ts-logger'
+import { Logger } from 'ts-logger/src/logger'
 
 Logger.setLevel('info')          // Only show 'info', 'warn', 'error'
 Logger.showTimestamp()           // Optional: show timestamps (enabled by default)

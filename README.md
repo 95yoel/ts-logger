@@ -1,6 +1,7 @@
 # ts-logger
 
-![CI](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml/badge.svg)
+[![CI](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml/badge.svg)](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml)
+
 
 
 A lightweight, zero-dependency logger for TypeScript.

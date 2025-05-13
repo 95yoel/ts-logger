@@ -239,17 +239,17 @@ export class Logger {
         ctx?: string,
         data?: unknown
     ) {
-        if (!this._config.enabled) return;
-        if (levelOrder.indexOf(level) < levelOrder.indexOf(this._config.minLevel)) return;
-        if (ctx && this._disabledContexts.has(ctx)) return;
+        if (!this._config.enabled) return
+        if (levelOrder.indexOf(level) < levelOrder.indexOf(this._config.minLevel)) return
+        if (ctx && this._disabledContexts.has(ctx)) return
         const ev = {
             level,
             message: msg,
             context: ctx,
             data,
             timestamp: this._config.showTimestamp ? new Date().toISOString() : undefined,
-        };
-        console.log(JSON.stringify(ev));
+        }
+        this.log(level, JSON.stringify(ev), ctx)
     }
 
 

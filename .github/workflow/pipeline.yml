@@ -1,0 +1,38 @@
+name: Build and lint
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Lint
+        run: npm run lint
+      
+      - name: Build dist
+        run: npm run build
+      
+      - name: Verify filess
+        run: |
+          test -f dist/logger.js || (echo "❌ dist/logger.js not found" && exit 1)
+          test -f dist/logger.d.ts || (echo "❌ dist/logger.d.ts not found" && exit 1)
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-logger
+          path: dist

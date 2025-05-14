@@ -1,8 +1,10 @@
 # ts-logger
 
 [![CI](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml/badge.svg)](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml)
-
 ![Bundle size](https://img.shields.io/bundlephobia/minzip/ts-logger)
+![License](https://img.shields.io/github/license/95yoel/ts-logger)
+![Language](https://img.shields.io/github/languages/top/95yoel/ts-logger)
+![Last commit](https://img.shields.io/github/last-commit/95yoel/ts-logger)
 
 
 

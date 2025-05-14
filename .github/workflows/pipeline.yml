@@ -1,4 +1,4 @@
-name: ts-logger
+name: CI - ts-logger
 
 on:
   push:

@@ -2,6 +2,9 @@
 
 [![CI](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml/badge.svg)](https://github.com/95yoel/ts-logger/actions/workflows/pipeline.yml)
 
+![Bundle size](https://img.shields.io/bundlephobia/minzip/ts-logger)
+
+
 
 
 A lightweight, zero-dependency logger for TypeScript.
